@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    .list {
+        list-style: decimal
+    }
+
+    .item {
+        display: none;
+        margin: 20px;
+        list-style: none;
+    }
+
+
+    #text_shadow {
+        font-family: "Arial Narrow", sans-serif;
+        font-size: 72px;
+        text-shadow: 2px 2px 5px red;
+    }
+
+    #box_shadow {
+        width: 200px;
+        height: 100px;
+        background: yellow;
+        box-shadow: 5px 10px;
+    }
+
+    #block_withoutRotate {
+        width: 400px;
+        height: 200px;
+        background: red;
+    }
+
+    #block_withRotate {
+        width: 400px;
+        height: 200px;
+        background: black;
+        transform: rotate(20deg);
+    }
+
+    #block_withoutTranslate {
+        width: 400px;
+        height: 200px;
+        background: blue;
+    }
+
+    #block_withTranslate {
+        width: 400px;
+        height: 200px;
+        background: blue;
+        transform: translate(20%, 30%) rotate(-20deg);
+    }
+
+    #block_withoutScale {
+        margin-top: 50px;
+        width: 50px;
+        height: 50px;
+        background: aqua;
+        opacity: 0.1;
+    }
+
+    #block_withScale {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        background: aqua;
+        transform: scale(0.5, 0.5) translate(0, -130px);
+    }
+
+    #blockWithTransition {
+        width: 60px;
+        height: 20px;
+        background: black;
+        transition: background-color, width, height;
+        transition-delay: 1s;
+        transition-duration: 4s;
+    }
+
+    #blockWithTransition:hover {
+        width: 800px;
+        height: 50px;
+        background: red;
+
+    }
+
+    #rotate_transition {
+        width: 150px;
+        height: 50px;
+        background: blue;
+        transition: transform;
+        transition-duration: 5s;
+    }
+
+    #rotate_transition:hover {
+        transform: translate(120px) rotate(-50deg);
+    }
+
+
+    #rotate_animation {
+        width: 150px;
+        height: 100px;
+        animation-name: jumingblock;
+        animation-duration: 1s;
+    }
+
+
+    @keyframes jumingblock {
+        from{
+            background-color: red;
+        }
+
+        to{
+            background-color: green;
+        }
+        /*0% {*/
+        /*    transform: translate(0)*/
+        /*}*/
+
+        /*20% {*/
+        /*    transform: translate(30px)*/
+        /*}*/
+        /*30% {*/
+        /*    transform: translate(50px)*/
+        /*}*/
+        /*50% {*/
+        /*    transform: translate(80px)*/
+        /*}*/
+
+        /*60%{*/
+        /*    fill: yellow;*/
+        /*}*/
+        /*    75%  {transform:  translate(-120px)}*/
+        /*    100%  {transform: translate(-90px)}*/
+    }
+
+</style>
+<body>
+<ul class="list">
+    <li>
+        Text Shadow
+        <ul class="item">
+            <li>
+                <div id="text_shadow"> CSS SHADOWS</div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Box Shadow
+        <ul class="item">
+            <li>
+                <div id="box_shadow"></div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Transform rotate
+        <ul class="item">
+            <li>
+                <div id="block_withoutRotate"></div>
+                <div id="block_withRotate"></div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Transform translate
+        <ul class="item">
+            <li>
+                <div id="block_withoutTranslate"></div>
+                <div id="block_withTranslate"></div>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        Transform scale
+        <ul class="item">
+            <li>
+                <div id="block_withoutScale"></div>
+                <div id="block_withScale"></div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        CSS Animation width animation
+        <ul class="item">
+            <li>
+                <div id="blockWithTransition"></div>
+            </li>
+        </ul>
+    </li>
+
+
+    <li>
+        CSS transition width rotate
+        <ul class="item">
+            <li>
+                <div id="rotate_transition"></div>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        CSS animation width rotate
+        <ul class="item">
+            <li>
+                <img alt="bull" id="rotate_animation" src="dittberner_gnu.svg"/>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    let list = document.getElementsByClassName('list')[0];
+    list.addEventListener("click", (event) => {
+        let item = event.target.children[0];
+        if (item && item.tagName === "UL") {
+            let display = getComputedStyle(item).display;
+            display === "none" ? item.style.display = 'block' : item.style.display = 'none'
+        }
+    });
+</script>
+</body>
+</html>
+
+
+<!--<div style="font-size: 1.8em">-->
+<!--    DOG-->
+<!--    <div style="font-size: 1.8em">-->
+<!--        DOG-->
+<!--        <div style="font-size: 1.8em">-->
+<!--            DOGg-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div style="display: flex; justify-content: space-between">-->
+<!--    <form class="form">-->
+<!--        <label>Form View</label>-->
+<!--        <label>-->
+<!--            <input class="input" id="login" type="text" value=""/>-->
+<!--        </label>-->
+<!--        <label>-->
+<!--            <input class="input" id="password" type="text" value=""/>-->
+<!--        </label>-->
+
+<!--        <label>-->
+<!--            <input id="type" type="text" value=""/>-->
+<!--        </label>-->
+<!--    </form>-->
+
+
+<!--    <form class="form black">-->
+<!--        <label> <input type="text" class="input" placeholder="login" name="login" oninput="getData(this)"/></label>-->
+<!--        <label> <input type="password" class="input" name="password" oninput="getData(this)"/></label>-->
+<!--        <fieldset onchange="getData(this)">-->
+<!--            <label>-->
+<!--                JS-->
+<!--                <input class="input" type="checkbox" value="js" checked/>-->
+<!--            </label>-->
+<!--            <label>-->
+<!--                React-->
+<!--                <input class="input" type="checkbox" value="react" checked/>-->
+<!--            </label>-->
+<!--            <label>-->
+<!--                C++-->
+<!--                <input class="input" type="checkbox" value="C++"/>-->
+<!--            </label>-->
+<!--        </fieldset>-->
+<!--    </form>-->
+<!--</div>-->

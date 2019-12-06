@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .body {
+        margin: 0;
+    }
+
+    .main_block {
+        background: lightgray;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form {
+        width: 600px;
+        height: 400px;
+        display: flex;
+        background: #374343;;
+        border-radius: 8px;
+        padding: 10px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 1px 2px 7px black;
+        color: white;
+    }
+
+    .input {
+        width: 540px;
+        margin: 5px;
+        height: 40px;
+        padding-left: 7px;
+        font-family: cursive;
+        font-size: 17px;
+        border-radius: 5px;
+        background: #3e4646;
+        color: white;
+    }
+
+    .input::placeholder {
+        color: white;
+
+    }
+
+    .input:focus {
+        background: red;
+    }
+
+    .button {
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .button_block {
+        margin-top: 20px;
+    }
+
+    .button.success {
+        background: green;
+    }
+
+    .button.cancel {
+        background: red;
+    }
+
+    .label {
+        align-self: flex-start;
+    }
+</style>
+<body>
+
+<div class="main_block">
+    <form class="form" method="get">
+<!--        <div class="form_header">-->
+        <label class="label">Auth</label>
+<!--        </div>-->
+        <label>
+            <input class="input" type="text" name="userName" placeholder="your name" required/>
+        </label>
+        <label>
+            <input class="input" type="number" name="userEmail" placeholder="email"/>
+        </label>
+        <div class="button_block">
+            <button class="button success">Send</button>
+            <button class="button cancel">Cancel</button>
+        </div>
+    </form>
+</div>
+<script>
+
+
+    function getValues() {
+        let form = document.getElementsByClassName('form')[0];
+        console.log(form)
+    }
+
+    function getData(context) {
+        if (context.type === 'fieldset') {
+            let inputs = Array.from(context.getElementsByTagName("input"));
+            for (let key = 0; key < inputs.length; key++) {
+                console.log(inputs[key].value, inputs[key].checked)
+            }
+        } else {
+            a[context.name] = context.value;
+            let input = document.getElementById(context.name);
+            input.value = context.value;
+        }
+        console.log(a)
+    }
+</script>
+</body>
+</html>

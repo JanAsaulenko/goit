@@ -1,0 +1,130 @@
+.flex_container {
+    display: flex;
+    height: 400px;
+    /*flex-wrap: wrap;*/
+    /*width: 600px;*/
+    background: black;
+}
+
+/*.flex-container_item {*/
+/*    background: red;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*}*/
+
+/*.flex-container_direction {*/
+/*    height: 400px;*/
+/*    width: 400px;*/
+/*    display: flex;*/
+/*    flex-direction: row-reverse;*/
+/*    background: green;*/
+/*}*/
+
+/*.flex-container_direction-item {*/
+/*    margin: 5px;*/
+/*    background: blue;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*}*/
+
+/*.flex-container-aligner {*/
+/*    background: blue;*/
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*}*/
+
+/*.flex-container-aligner-item {*/
+/*    margin: 5px;*/
+/*    background: wheat;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*}*/
+
+/*.flex-container-aligner-item:nth-child(2) {*/
+/*    width: 30px;*/
+/*    background: yellow;*/
+/*}*/
+
+/*.flex-container-aligner-item:nth-child(5) {*/
+/*    width: 10px;*/
+/*    background: aquamarine;*/
+/*}*/
+
+
+.flex-multiLines {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+    height: auto;
+    flex-wrap: wrap;
+
+    background: black;
+}
+
+
+/*.flex-multiLines_item {*/
+/*    width: 120px;*/
+/*    margin: 5px;*/
+/*    height: 120px;*/
+/*    background: red;*/
+/*    color: white;*/
+/*}*/
+
+
+/*---------------flex-elements------------------*/
+
+/*.flex_container-ordered-item {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    margin: 5px;*/
+/*    background: white;*/
+/*}*/
+
+/*.flex_container-ordered-item:nths-child(1){*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    order: 2;*/
+/*}*/
+
+
+.flex_container-ordered-item {
+    width: 300px;
+    height: 50px;
+    margin: 5px;
+    background: white;
+}
+
+
+/*.flex_container-ordered-item:nth-child(2) {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    order: 2;*/
+/*}*/
+
+/*.flex_container-ordered-item:nth-child(1) {*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    order: 3;*/
+/*}*/
+
+.flex_container-ordered-item:nth-child(2) {
+    width: 50px;
+    flex-basis: 50px;
+    background: antiquewhite;
+    height: 50px;
+    flex-grow: 3;
+}
+
+
+/*.flex_container-ordered-item:nth-child(4){*/
+/*    width: 200px;*/
+/*    height: 50px;*/
+/*    flex-shrink: 3;*/
+/*}*/
+
+/*.flex_container-ordered-item:nth-child(3){*/
+/*    flex-basis: 300px;*/
+/*    height: 50px;*/
+/*    flex-shrink: 3;*/
+
+/*}*/
