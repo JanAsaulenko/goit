@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+#header{
+    background: chartreuse;
+}
+
+.header__button{
+    background: white;
+}
+
+
+.header.header_theme-white{
+    background: grey;
+    color: black;
+   }
+#paragraph{
+    color:violet
+}
+
+
+.header{
+width: 100%;
+height: auto;
+background: black;
+}
+
+
+.header__logo{
+  /* color: blanchedalmond; */
+  display: inline-block;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   text-align: center;
+   background: red;
+
+}
+.header__input{
+    width: 200px;
+    height: 50px;
+    background: black;
+    color:white;
+}
+
+/* pseudo selector for our placeholder */
+.header__input:focus{
+    background: red;
+}
+/* selector for attr */
+.header__input::placeholder{
+    color:white 
+}
+
+
+
+
+section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: chartreuse;
+}
+
+#button{
+    width: 60px;
+    height: 20px;
+    background: brown;
+    border: none;
+}
+
+
+.first_block{
+ position: absolute;
+height: 200px;
+width: 200px;
+background: black;
+padding-left: 20px;
+}
+
+
+.first_block--label{
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+    background: black;
+}
