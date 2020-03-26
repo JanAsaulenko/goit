@@ -1,0 +1,51 @@
+.container {
+    display: grid;
+    grid-template-columns: 200px  ;
+}
+
+.container .container_item{
+    background: red;
+    margin: 3px;
+    
+}
+
+
+.container_fraction {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+}
+
+.container_repeat {
+    margin-top: 20px;
+    display: grid;
+    width: 400px;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.container_auto {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 300px 200px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
+
+
+
+
+
+.container_with_gaps{
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap:20px
+
+    
+}
+
+
+
+.placeForGoods{
+    display: none
+}

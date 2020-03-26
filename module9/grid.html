@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="./gridstyle.css" />
+</head>
+
+<body>
+
+    <div>Goods</div>
+    <div class="placeForGoods"></div>
+    <script id="goods" type="text/x-handlebars-template">
+        <div class="container">
+            <div class="container_item">{{Book}}</div>
+            <div class="container_item">{{Cup}}</div>
+            <div class="container_item">{{Milk}}</div>
+            <div class="container_item">{{Flour}}</div>
+            <div class="container_item">{{Potato}}</div>
+            <div class="container_item">{{Cucumber}}</div>
+        </div>
+    </script>
+
+
+
+
+
+
+    <div class="container_fraction">
+        <div class="container_item">1</div>
+        <div class="container_item">2</div>
+        <div class="container_item">3</div>
+        <div class="container_item">4</div>
+    </div>
+
+    <div class="container_repeat">
+        <div class="container_item">1</div>
+        <div class="container_item">2</div>
+        <div class="container_item">3</div>
+        <div class="container_item">4</div>
+        <div class="container_item">5</div>
+    </div>
+
+
+    <div class="container_auto">
+        <div class="container_item">
+            Two
+            <p>I have some more content in.</p>
+            <p>This makes me taller than 100 pixels.</p>
+            <p>I have some more content in.</p>
+            <p>This makes me taller than 100 pixels.</p>
+        </div>
+        <div class="container_item">2</div>
+        <div class="container_item">3</div>
+        <div class="container_item">4</div>
+        <div class="container_item">5</div>
+    </div>
+
+
+
+
+    <div class="container_with_gaps">
+        <div class="container_item">1</div>
+        <div class="container_item">2</div>
+        <div class="container_item">3</div>
+        <div class="container_item">4</div>
+        <div class="container_item">5</div>
+    </div>
+
+
+    <div style="display: flex;  flex-direction: column;   align-items: center;">
+        <a href="./siteonGrids.html">
+            <h1> Basic site example</h1>
+        </a>
+
+        </h1>
+
+
+        <img src="./example.png" alt="example" />
+    </div>
+
+
+
+    <script src="./script.js">
+
+    </script>
+
+</body>
+
+</html>

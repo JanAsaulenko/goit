@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" </head>
+    <style>
+        .my_container {
+            width: 80%;
+            background: red;
+            margin: 0 auto;
+        }
+
+        .nerow {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .linia {
+            flex-direction: row;
+        }
+
+        .priama {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 576px) {
+            .necol {
+                width: 100%;
+                background: green;
+            }
+
+            .necol-lg {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 576px) {
+            .necol {
+                width: 540px;
+                background: yellow;
+            }
+
+            .necol-md {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .necol-md {
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+            .necol {
+                width: 1140px;
+            }
+
+            .necol-md {
+                width: calc(100%/3);
+            }
+
+            .necol-lg {
+                width: 50%;
+            }
+        }
+    </style>
+
+<body>
+    <div>
+        <div class="my_container">
+            <div class="nerow ">
+                <div class="necol-md">
+                    0
+                </div>
+                <div class="necol-md">
+                    1
+                </div>
+                <div class="necol-md">
+                    2
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class=" col-sm-6  border bg-dark border-light">md</div>
+                <div class=" col-sm-6  border  border-light">md</div>
+                <div class=" col-sm-6  border bg-dark border-light">md</div>
+                <div class=" col-sm-6  border border-light">md</div>
+                <div class=" col-sm-6  border bg-dark border-light">md</div>
+            </div>
+            <!-- 
+                <div class="col border bg-light">s</div>
+                <div class="col border bg-light">s</div> -->
+        </div>
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
+
+    <script src="./node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        let a = document.getElementsByClassName('container')[0];
+
+
+
+        class ElementChecker
+        {
+            constructor(value)
+            {
+                this.$value = $(`${value}`)[0]
+
+            }
+
+            getValue()
+            {
+                console.log(this.$value);
+                return this.$value
+            }
+
+
+        }
+
+        let container = new ElementChecker('.container');
+        console.log('kklkl', container.getValue());
+    </script>
+</body>
+
+</html>

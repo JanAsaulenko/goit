@@ -1,0 +1,49 @@
+
+body{
+    margin:0;
+}
+
+.container{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header header header"
+    "ads nav article "
+    "footer footer footer";
+    grid-template-rows: 60px 1fr 60px;
+    grid-template-columns: 20%  15% 1fr;
+    grid-gap:6px;
+
+}
+
+
+#header{
+    grid-area: header;
+    background-color: yellow;
+}
+
+
+#mainNav{
+    grid-area: nav;
+ background: red;
+
+}
+
+
+#mainArticle{
+    grid-area:article ;
+    background: blue;
+}
+
+
+
+#ourAds{
+ grid-area: ads;   
+ background: orange;
+}
+
+#footer{
+    grid-area: footer;
+    background-color: yellow;
+
+}
