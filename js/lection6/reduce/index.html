@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./newscript.js"></script> -->
+</head>
+
+
+<style>
+    .container {
+        display: grid;
+        width: 500px;
+        grid-template-columns: 2fr 2fr 2fr;
+    }
+
+    .container_items {
+        display: grid;
+        grid-template-columns: 1fr;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="container_items">Tv
+            <span>Price</span>
+            <span>700</span>
+            <input oninput="handleInputChange(this)" />
+        </div>
+        <div class="container_items">Mobile
+            <span>Price</span>
+            <span>200</span>
+            <input oninput="handleInputChange(this)" />
+        </div>
+
+        <div class="container_items">Headphones
+            <span>Price</span>
+            <span>400</span>
+            <input oninput="handleInputChange(this)" />
+
+
+        </div>
+    </div>
+
+<script src="./newscript.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
